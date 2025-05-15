@@ -1,6 +1,7 @@
 import React from 'react'
 import { words } from '../constants'
 import Button from '../components/Button'
+import HeroExperience from '../components/HeroModels/HeroExperience'
 
 const Hero: React.FC = () => {
   return (
@@ -34,8 +35,8 @@ const Hero: React.FC = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10">
-              Hi, I'm <span className="font-bold">Sean Chen</span>, a <span className="font-bold">Google Cloud AI Developer</span> based in Master Concept Taiwan with a passion for code, AI, and design.
+            <p className="text-white-50 md:text-xl relative z-10 wrap-break-word">
+              Hi, I'm <span className="font-bold">Sean Chen</span>, a <span className="font-bold">Google Cloud AI Developer</span>  passion for code, AI, and design.
             </p>
             <Button
               className="md:w-80 md:h-16 w-60"
@@ -45,6 +46,11 @@ const Hero: React.FC = () => {
           </div>
         </header>
         {/* right: 3D Model */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   )
