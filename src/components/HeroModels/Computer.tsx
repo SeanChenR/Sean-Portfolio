@@ -1,9 +1,7 @@
-import React from 'react'
 import { useGLTF } from '@react-three/drei'
-// import * as THREE from 'three'
-import type { GLTFResult } from '../../types/type'
+import type { ComputerProps, GLTFResult } from '../../types/type'
 
-const Computer: React.FC = () => {
+const Computer = ({ isMobile }: ComputerProps) => {
   const computer = useGLTF("./desktop_pc/scene.gltf") as unknown as GLTFResult
 
   return (
@@ -20,8 +18,8 @@ const Computer: React.FC = () => {
       />
       <primitive
         object={computer.scene}
-        scale={0.75}
-        position={[0, -4.25, -1.5]}
+        scale={isMobile ? 0.55 : 0.75}
+        position={isMobile ? [0, -3, -1.7] : [0, -4.25, -1.5]}
         rotation={[0.01, -0.2, -0.1]}
       />
     </mesh>

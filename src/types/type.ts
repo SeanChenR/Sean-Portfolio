@@ -80,3 +80,7 @@ export type SocialImg = {
   name: string
   imgPath: string
 }
+
+export type ComputerProps = {
+  isMobile: boolean
+}
