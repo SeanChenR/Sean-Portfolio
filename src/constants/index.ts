@@ -25,7 +25,11 @@ export const words: Word[] = [
 
 export const navLinks: NavLink[] = [
   {
-    name: "Work",
+    name: "Notes",
+    link: "#hero",
+  },
+  {
+    name: "Side Project",
     link: "#work",
   },
   {
