@@ -22,7 +22,7 @@ const Info: React.FC = () => {
   })
 
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section id="info" className="relative w-full h-screen mx-auto">
       <div className="absolute top-0 right-0 z-10">
         <img src="/images/bg.png" alt="background" />
       </div>

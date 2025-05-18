@@ -1,13 +1,15 @@
 import React from 'react'
 import Hero from './layout/Hero'
-import PC from './layout/Info'
+import Info from './layout/Info'
+import NavBar from './components/NavBar'
 import ShowcaseSection from './layout/ShowcaseSection'
 
 const App: React.FC = () => {
   return (
     <>
       <div className="hero-bg">
-        <PC />
+        <NavBar />
+        <Info />
         <Hero />
         <ShowcaseSection />
       </div>
