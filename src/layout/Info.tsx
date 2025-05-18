@@ -53,11 +53,11 @@ const Info: React.FC = () => {
                 </span>
               </span>
             </h1>
-            <p className="text-white-50 md:text-2xl text-lg relative z-10 wrap-break-word">
-              Hi, I'm a <span className="font-bold text-violet-500">Google Cloud AI Developer</span><br className="sm:block hidden" />passion for code, AI, and design.
+            <p className="text-white-50 md:text-2xl text-sm relative z-10 wrap-break-word">
+              Hi, I'm a <span className="font-bold text-violet-500">Google Cloud AI Developer</span> passion for code, AI, and design.
             </p>
           </div>
-          <div className="flex-shrink-0 mt-8 lg:mt-0 lg:ml-16 md:ml-10 ml-0 avatar">
+          <div className="flex-shrink-0 mt-4 lg:mt-0 lg:ml-16 md:ml-10 -ml-6 avatar">
             <img
               src="/logo.png"
               alt="Sean Chen Profile"
