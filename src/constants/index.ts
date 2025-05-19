@@ -56,36 +56,47 @@ export const counterItems: CounterItem[] = [
 export const logoIconsList: LogoIcon[] = [
   {
     imgPath: "/images/logos/company-logo-1.png",
+    name: "Shopify"
   },
   {
     imgPath: "/images/logos/company-logo-2.png",
+    name: "Microsoft"
   },
   {
     imgPath: "/images/logos/company-logo-3.png",
+    name: "Adidas"
   },
   {
     imgPath: "/images/logos/company-logo-4.png",
+    name: "Docker"
   },
   {
     imgPath: "/images/logos/company-logo-5.png",
+    name: "Hostinger"
   },
   {
     imgPath: "/images/logos/company-logo-6.png",
+    name: "Adobe"
   },
   {
     imgPath: "/images/logos/company-logo-7.png",
+    name: "Appwrite"
   },
   {
     imgPath: "/images/logos/company-logo-8.png",
+    name: "Nvidia"
   },
   {
     imgPath: "/images/logos/company-logo-9.png",
+    name: "Vercel"
   },
   {
     imgPath: "/images/logos/company-logo-10.png",
+    name: "Linear"
   },
   {
     imgPath: "/images/logos/company-logo-11.png",
+    name: "Loom"
   },
 ]
 

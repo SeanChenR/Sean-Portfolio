@@ -35,6 +35,7 @@ export type CounterItem = {
 
 export type LogoIcon = {
   imgPath: string
+  name: string
 }
 
 export type Ability = {
