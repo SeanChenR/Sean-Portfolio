@@ -39,7 +39,7 @@ export type LogoIcon = {
 }
 
 export type Ability = {
-  imgPath: string
+  format: "ai" | "ops" | "web"
   title: string
   desc: string
 }
