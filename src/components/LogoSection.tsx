@@ -8,7 +8,7 @@ interface LogoIconProps {
 
 const LogoIcon: FC<LogoIconProps> = ({ icon: { name, imgPath } }) => {
   return (
-    <div className="flex-one flex-center marquee-item">
+    <div className="flex-center marquee-item">
       <img src={imgPath} alt={name} />
     </div>
   )
@@ -17,16 +17,12 @@ const LogoIcon: FC<LogoIconProps> = ({ icon: { name, imgPath } }) => {
 const LogoSection: React.FC = () => {
   return (
     <>
-      <div className="md:my-20 my-10 relative">
+      <div className="my-10 relative">
         <div className="gradient-edge" />
         <div className="gradient-edge" />
 
-        <div className="marquee h-52">
+        <div className="marquee md:h-20 h-10">
           <div className="marquee-box md:gap-12 gap-5">
-            {logoIconsList.map((icon) => (
-              <LogoIcon key={icon.name} icon={icon} />
-            ))}
-
             {logoIconsList.map((icon) => (
               <LogoIcon key={icon.name} icon={icon} />
             ))}
