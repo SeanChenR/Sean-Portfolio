@@ -3,7 +3,8 @@ import Hero from './layout/Hero'
 import Info from './layout/Info'
 import NavBar from './components/NavBar'
 import ShowcaseSection from './layout/ShowcaseSection'
-import LogoSection from './components/LogoSection'
+import LogoSection from './layout/LogoSection'
+import FeatureCards from './layout/FeatureCards'
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Hero />
         <ShowcaseSection />
         <LogoSection />
+        <FeatureCards />
       </div>
     </>
   )

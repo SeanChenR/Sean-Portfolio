@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
-import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
+import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing"
+import { BlendFunction } from "postprocessing"
 import * as THREE from 'three'
-import type { Object3D } from 'three';
+import type { Object3D } from 'three'
 import type { GLTFResult } from '../../types/type'
 
 export function Room(props: React.JSX.IntrinsicElements['group']) {

@@ -414,6 +414,12 @@ section {
   animation: marquee 60s linear infinite;
 }
 
+@media (max-width: 768px) {
+  .marquee-box {
+    width: 500%;
+  }
+}
+
 @keyframes marquee {
   0% {
     left: 0;

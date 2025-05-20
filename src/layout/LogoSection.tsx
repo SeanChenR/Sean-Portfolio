@@ -1,4 +1,4 @@
-import React, { type FC } from 'react'
+import React from 'react'
 import { logoIconsList } from '../constants'
 import type { LogoIcon } from '../types/type'
 
@@ -6,7 +6,7 @@ interface LogoIconProps {
   icon: LogoIcon
 }
 
-const LogoIcon: FC<LogoIconProps> = ({ icon: { name, imgPath } }) => {
+const LogoIcon: React.FC<LogoIconProps> = ({ icon: { name, imgPath } }) => {
   return (
     <div className="flex-center marquee-item">
       <img src={imgPath} alt={name} />
@@ -23,6 +23,9 @@ const LogoSection: React.FC = () => {
 
         <div className="marquee md:h-20 h-10">
           <div className="marquee-box md:gap-12 gap-5">
+            {logoIconsList.map((icon) => (
+              <LogoIcon key={icon.name} icon={icon} />
+            ))}
             {logoIconsList.map((icon) => (
               <LogoIcon key={icon.name} icon={icon} />
             ))}

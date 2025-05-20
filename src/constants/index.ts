@@ -102,21 +102,21 @@ export const logoIconsList: LogoIcon[] = [
 
 export const abilities: Ability[] = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    format: "ai",
+    title: "AI Solutions in Action",
+    desc: "Focused on designing and implementing AI workflows and applications that deliver real business value — from ideation to deployment.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    format: "ops",
+    title: "Cross-Disciplinary Integration",
+    desc: "Capable of integrating AI, DevOps, and Web technologies into cohesive, maintainable end-to-end systems.",
   },
   {
-    imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    format: "web",
+    title: "Full-Stack in Progress",
+    desc: "Actively developing full-stack expertise to build seamless user interfaces and robust backend systems for the best product delivery.",
   },
-];
+]
 
 export const techStackImgs: TechStackImg[] = [
   {
@@ -139,7 +139,7 @@ export const techStackImgs: TechStackImg[] = [
     name: "Project Manager",
     imgPath: "/images/logos/git.svg",
   },
-];
+]
 
 export const techStackIcons: TechStackIcon[] = [
   {
@@ -172,7 +172,7 @@ export const techStackIcons: TechStackIcon[] = [
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
-];
+]
 
 export const expCards: ExperienceCard[] = [
   {
@@ -211,7 +211,7 @@ export const expCards: ExperienceCard[] = [
       "Coordinated with the product team to implement features based on feedback.",
     ],
   },
-];
+]
 
 export const expLogos: ExperienceLogo[] = [
   {
@@ -226,7 +226,7 @@ export const expLogos: ExperienceLogo[] = [
     name: "logo3",
     imgPath: "/images/logo3.png",
   },
-];
+]
 
 export const testimonials: Testimonial[] = [
   {
@@ -271,7 +271,7 @@ export const testimonials: Testimonial[] = [
       "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
     imgPath: "/images/client6.png",
   },
-];
+]
 
 export const socialImgs: SocialImg[] = [
   {
@@ -290,4 +290,4 @@ export const socialImgs: SocialImg[] = [
     name: "linkedin",
     imgPath: "/images/linkedin.png",
   },
-];
+]
