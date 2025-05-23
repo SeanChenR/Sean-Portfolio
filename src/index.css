@@ -447,14 +447,14 @@ section {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 12px;
-  border: 2px solid transparent;
+  border: 2px solid rgb(249, 3, 192);
   background: var(--gradient);
   background-attachment: fixed;
   mask: linear-gradient(#0000, #0000),
     conic-gradient(
       from calc((var(--start) - 15) * 1deg),
       #ffffff1f 0deg,
-      rgb(255, 255, 255),
+      white,
       #ffffff00 100deg
     );
   mask-composite: intersect;

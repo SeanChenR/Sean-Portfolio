@@ -1,10 +1,7 @@
 import React from 'react'
 import { abilities } from '../constants'
 import { SiClaude, SiDocker, SiFastapi, SiGit, SiGo, SiGooglecloud, SiGooglecloudstorage, SiGooglegemini, SiGooglemaps, SiKubernetes, SiLangchain, SiMongodb, SiN8n, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPytorch, SiTailwindcss } from '@icons-pack/react-simple-icons'
-
-interface IconBadgesProps {
-  format: "ai" | "ops" | "web"
-}
+import type { IconBadgesProps } from '../types/type'
 
 const FeatureCards: React.FC = () => {
   return (

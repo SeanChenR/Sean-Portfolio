@@ -85,3 +85,12 @@ export type SocialImg = {
 export type ComputerProps = {
   isMobile: boolean
 }
+
+export interface IconBadgesProps {
+  format: "ai" | "ops" | "web"
+}
+
+export interface TitleHeaderProps {
+  title: string
+  sub: string
+}
