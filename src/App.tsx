@@ -6,6 +6,7 @@ import ShowcaseSection from './layout/ShowcaseSection'
 import LogoSection from './layout/LogoSection'
 import FeatureCards from './layout/FeatureCards'
 import ExperienceSection from './layout/ExperienceSection'
+import TechStack from './layout/TechStack'
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <LogoSection />
         <FeatureCards />
         <ExperienceSection />
+        <TechStack />
       </div>
     </>
   )

@@ -53,7 +53,13 @@ export type TechStackIcon = {
   name: string
   modelPath: string
   scale: number
-  rotation: number[]
+  rotation: THREE.Euler
+  position: THREE.Vector3
+  intensity: number
+}
+
+export type TechStackIconProps = {
+  model: TechStackIcon
 }
 
 export type ExperienceCard = {

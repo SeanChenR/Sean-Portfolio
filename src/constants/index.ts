@@ -11,6 +11,7 @@ import type {
   Testimonial,
   SocialImg
 } from '../types/type'
+import * as THREE from 'three'
 
 export const words: Word[] = [
   { text: "Ideas", imgPath: "/images/ideas.svg" },
@@ -143,34 +144,44 @@ export const techStackImgs: TechStackImg[] = [
 
 export const techStackIcons: TechStackIcon[] = [
   {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-  },
-  {
     name: "Python Developer",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
-    rotation: [0, 0, 0],
+    rotation: new THREE.Euler(0, 0, 0),
+    position: new THREE.Vector3(0, 0, 0),
+    intensity: 0.3,
+  },
+  {
+    name: "React Developer",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: new THREE.Euler(0, 0, 0),
+    position: new THREE.Vector3(0, 0, 0),
+    intensity: 0.3,
   },
   {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
-  },
-  {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
+    rotation: new THREE.Euler(0, -Math.PI / 2, 0),
+    position: new THREE.Vector3(0, 0, 0),
+    intensity: 0.3,
   },
   {
     name: "Project Manager",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
+    rotation: new THREE.Euler(0, -Math.PI / 4, 0),
+    position: new THREE.Vector3(0, 0, 0),
+    intensity: 0.3,
+  },
+  {
+    name: "DevOps Engineer",
+    modelPath: "/models/k8s.glb",
+    scale: 0.055,
+    rotation: new THREE.Euler(0, 0, 0),
+    position: new THREE.Vector3(-2.1, -2.1, 0),
+    intensity: 2,
   },
 ]
 
@@ -191,7 +202,7 @@ export const expCards: ExperienceCard[] = [
     review: "Sean demonstrated outstanding problem-solving skills. His ability to design end-to-end AI pipelines greatly enhanced our team's research efficiency and product capabilities.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "📊 Data Scientist Intern - Taiwan Economic Journal",
+    title: "Data Scientist Intern - Taiwan Economic Journal",
     date: "January 2024 - October 2024",
     responsibilities: [
       "Designed and implemented a backend RAG-based chatbot system with login-based chat history, leveraging vector databases and MySQL.",
