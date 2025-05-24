@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import ShowcaseSection from './layout/ShowcaseSection'
 import LogoSection from './layout/LogoSection'
 import FeatureCards from './layout/FeatureCards'
+import ExperienceSection from './layout/ExperienceSection'
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <ShowcaseSection />
         <LogoSection />
         <FeatureCards />
+        <ExperienceSection />
       </div>
     </>
   )
