@@ -76,16 +76,10 @@ export type ExperienceLogo = {
   imgPath: string
 }
 
-export type Testimonial = {
-  name: string
-  mentions: string
-  review: string
-  imgPath: string
-}
-
 export type SocialImg = {
   name: string
   imgPath: string
+  url: string
 }
 
 export type ComputerProps = {
