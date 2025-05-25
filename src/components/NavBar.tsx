@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { navLinks } from '../constants/index'
+import { navLinks } from '@/constants/index'
 
 const NavBar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)

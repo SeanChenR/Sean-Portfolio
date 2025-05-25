@@ -1,4 +1,4 @@
-import type { TitleHeaderProps } from '../types/type'
+import type { TitleHeaderProps } from '@/types/type'
 
 const TitleHeader = ({ title, sub }: TitleHeaderProps) => {
   return (

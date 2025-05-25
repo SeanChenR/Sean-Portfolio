@@ -1,4 +1,4 @@
-import type { ButtonProps } from '../types/type'
+import type { ButtonProps } from '@/types/type'
 
 const Button = ({ className, id, text }: ButtonProps) => {
   return (

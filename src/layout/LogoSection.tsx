@@ -1,6 +1,6 @@
 import React from 'react'
-import { logoIconsList } from '../constants'
-import type { LogoIcon } from '../types/type'
+import { logoIconsList } from '@/constants'
+import type { LogoIcon } from '@/types/type'
 
 interface LogoIconProps {
   icon: LogoIcon
