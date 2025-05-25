@@ -6,6 +6,10 @@ import TitleHeader from "../components/TitleHeader"
 import ContactExperience from "../components/Models/contact/ContactExperience"
 
 const Contact = () => {
+  const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID
+  const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID
+  const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+
   const formRef = useRef<HTMLFormElement>(null)
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
@@ -15,7 +19,7 @@ const Contact = () => {
   })
 
   const handleChange = (e: ChangeEvent) => {
-    const { name, value } = e.target as HTMLInputElement
+    const { name, value } = e.target as HTMLInputElement | HTMLTextAreaElement
     setForm({ ...form, [name]: value })
   }
 
@@ -27,10 +31,10 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        publicKey
       )
 
       // Reset form and stop loading

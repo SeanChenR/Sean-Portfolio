@@ -10,7 +10,7 @@ import type {
   ExperienceLogo,
   Testimonial,
   SocialImg
-} from '../types/type'
+} from '@/types/type'
 import * as THREE from 'three'
 
 export const words: Word[] = [

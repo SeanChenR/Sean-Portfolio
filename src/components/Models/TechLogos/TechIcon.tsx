@@ -1,6 +1,6 @@
 import { Environment, useGLTF, Float, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import type { TechStackIconProps } from '../../../types/type'
+import type { TechStackIconProps } from '@/types/type'
 import { useEffect } from 'react'
 import * as THREE from 'three'
 

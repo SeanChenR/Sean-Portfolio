@@ -1,6 +1,6 @@
 import React from 'react'
 import { words } from '../constants'
-import HeroPC from '../components/HeroModels/HeroPC'
+import HeroPC from '@/components/HeroModels/HeroPC'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 

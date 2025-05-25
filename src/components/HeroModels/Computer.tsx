@@ -1,5 +1,5 @@
 import { useGLTF } from '@react-three/drei'
-import type { ComputerProps, GLTFResult } from '../../types/type'
+import type { ComputerProps, GLTFResult } from '@/types/type'
 
 const Computer = ({ isMobile }: ComputerProps) => {
   const computer = useGLTF("./desktop_pc/scene.gltf") as unknown as GLTFResult
