@@ -1,18 +1,6 @@
 import { useGLTF } from "@react-three/drei"
-import type { GLTF } from "three-stdlib"
-import * as THREE from "three"
 import type { ThreeElements } from "@react-three/fiber"
-
-type GLTFResult = GLTF & {
-  nodes: {
-    Cube000_ComputerDesk_0001_1: THREE.Mesh
-    Cube000_ComputerDesk_0001_2: THREE.Mesh
-  }
-  materials: {
-    "ComputerDesk.001": THREE.Material
-    "FloppyDisk.001": THREE.Material
-  }
-}
+import type { GLTFResult } from '../../../types/type'
 
 export function DeskComputer(props: ThreeElements["group"]) {
   const { nodes, materials } = useGLTF("/models/computer-optimized-transformed.glb") as unknown as GLTFResult
