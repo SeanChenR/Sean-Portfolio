@@ -4,7 +4,7 @@ import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing"
 import { BlendFunction } from "postprocessing"
 import * as THREE from 'three'
 import type { Object3D } from 'three'
-import type { GLTFResult } from '../../types/type'
+import type { GLTFResult } from '@/types/type'
 
 export function Room(props: React.JSX.IntrinsicElements['group']) {
   const gltf = useGLTF('/models/optimized-room.glb') as unknown as GLTFResult

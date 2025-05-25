@@ -1,7 +1,7 @@
 import React from 'react'
 import { words } from '@/constants'
 import Button from '@/components/Button'
-import HeroExperience from '@/components/HeroModels/HeroExperience'
+import HeroExperience from '@/components/Models/HeroModels/HeroExperience'
 import AnimatedCounter from '@/components/AnimatedCounter'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
