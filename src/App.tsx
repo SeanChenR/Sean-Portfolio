@@ -8,6 +8,7 @@ import FeatureCards from './layout/FeatureCards'
 import ExperienceSection from './layout/ExperienceSection'
 import TechStack from './layout/TechStack'
 import Contact from './layout/Contact'
+import Footer from './layout/Footer'
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <ExperienceSection />
         <TechStack />
         <Contact />
+        <Footer />
       </div>
     </>
   )
