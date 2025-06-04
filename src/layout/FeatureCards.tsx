@@ -1,6 +1,6 @@
 import React from 'react'
 import { abilities } from '@/constants'
-import { SiClaude, SiDocker, SiFastapi, SiGit, SiGo, SiGooglecloud, SiGooglecloudstorage, SiGooglegemini, SiGooglemaps, SiKubernetes, SiLangchain, SiMongodb, SiN8n, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPytorch, SiTailwindcss } from '@icons-pack/react-simple-icons'
+import { SiClaude, SiDocker, SiFastapi, SiGit, SiGo, SiGooglecloud, SiGooglecloudstorage, SiGooglegemini, SiGooglemaps, SiKubernetes, SiLangchain, SiMongodb, SiNextdotjs, SiNodedotjs, SiPostgresql, SiPython, SiPytorch, SiTailwindcss } from '@icons-pack/react-simple-icons'
 import type { IconBadgesProps } from '@/types/type'
 
 const FeatureCards: React.FC = () => {
@@ -25,11 +25,11 @@ const IconBadges = ({ format }: IconBadgesProps) => {
   if (format === "ai") {
     return (
       <>
+        <SiPython title='Python' color='#F7C940' size={28} />
         <SiGooglecloud title='GoogleCloud' color='#4285F4' size={32} />
         <SiLangchain title='LangChain' color='#1C3C3C' size={40} />
         <SiGooglegemini title='Gemini' color='#8E75B2' size={32} />
         <SiClaude title='Claude' color='#D97757' size={32} />
-        <SiN8n title='n8n' color='#EA4B71' size={32} />
         <SiPytorch title='pt' color='#EE4C2C' size={32} />
       </>
     )
