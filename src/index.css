@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 
+@config "../tailwind.config.js";
+
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
@@ -110,11 +112,11 @@ section {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
     &.scrolled {
-      @apply top-0 bg-gradient-to-b from-pink-500 to-violet-500;
+      @apply top-0 bg-gradient-to-b from-[#f042ff] to-[#160078];
     }
 
     &.not-scrolled {
-      @apply md:top-10 top-0 bg-transparent;
+      @apply md:top-0 top-0 bg-transparent;
     }
 
     .inner {
@@ -135,7 +137,7 @@ section {
           @apply text-white-50 relative;
 
           span {
-            @apply transition-colors duration-300 hover:text-white;
+            @apply transition-colors duration-300 hover:text-white text-xl;
           }
 
           .underline {
@@ -149,10 +151,10 @@ section {
       @apply flex;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
+        @apply px-5 py-2 rounded-lg ring-2 ring-[#0ff] bg-transparent text-[#0ff] shadow-lg shadow-[#0ff] inset-shadow-sm inset-shadow-[#0ff] group-hover:bg-[#0ff] group-hover:inset-shadow-[#fff] transition-colors duration-300;
 
         span {
-          @apply group-hover:text-white transition-colors duration-300;
+          @apply group-hover:text-black transition-colors duration-300;
         }
       }
     }

@@ -53,7 +53,7 @@ const Info: React.FC = () => {
                 </span>
               </span>
             </h1>
-            <p className="text-violet-400 lg:mt-0 md:mt-0 mt-2 md:text-2xl text-sm relative z-10 whitespace-nowrap">
+            <p className="text-violet-400 lg:mt-4 md:mt-2 mt-2 md:text-2xl text-sm relative z-10 whitespace-nowrap">
               <span>Google Cloud AI Developer</span>
             </p>
           </div>
