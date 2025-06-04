@@ -14,3 +14,5 @@
 # Portfolio URL
 
 My Portfolio Website Host on Vercel -> [Sean Portfolio URL](https://sean-portfolio-ten.vercel.app/)
+
+![Alt](https://repobeats.axiom.co/api/embed/56cc3b259a7c7dd392f158f538bfb18baa527d4d.svg "Repobeats analytics image")
