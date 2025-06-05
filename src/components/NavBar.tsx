@@ -106,6 +106,7 @@ const NavBar: React.FC = () => {
           </GradientText>
         </a>
 
+        {/* 桌面版導航 */}
         <nav className="desktop">
           <ul>
             {navLinks.map(({ link, name }) => {
@@ -154,9 +155,114 @@ const NavBar: React.FC = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
+        {/* 手機版導航 - 顯示當前活躍 section */}
+        <nav className="mobile">
+          <div className="current-section">
+            {(() => {
+              const currentNav = navLinks.find(({ link }) => {
+                const sectionId = link.replace('#', '')
+                return activeSection === sectionId
+              })
+              
+              return (
+                <div className="section-indicator">
+                  <span className="section-dot" />
+                  <span className="section-name">
+                    {currentNav?.name || navLinks[0]?.name || 'Home'}
+                  </span>
+                </div>
+              )
+            })()}
+          </div>
+        </nav>
+
+        <a href="#contact" className="contact-btn group relative inline-block">
           <div className="inner glow-cyan">
             <span>Contact Me</span>
+            <div className="star-1">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
+            <div className="star-2">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
+            <div className="star-3">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
+            <div className="star-4">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
+            <div className="star-5">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
+            <div className="star-6">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
+            <div className="star-7">
+              <svg xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
+                <defs></defs>
+                <g id="Layer_x0020_1">
+                  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                  <path
+                    d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                    className="fil0"></path>
+                </g>
+              </svg>
+            </div>
           </div>
         </a>
       </div>
