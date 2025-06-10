@@ -241,28 +241,33 @@ export const expLogos: ExperienceLogo[] = [
 
 export const socialImgs: SocialImg[] = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
+    name: "instagram",
+    imgPath: "/images/instagram.svg",
     url: "https://www.instagram.com/sean._.0111/"
   },
   {
     name: "linkedin",
-    imgPath: "/images/linkedin.png",
+    imgPath: "/images/linkedin.svg",
     url: "https://www.linkedin.com/in/shaun-en-sean-chen-sean0111/"
   },
   {
     name: "github",
-    imgPath: "/images/github.png",
+    imgPath: "/images/github.svg",
     url: "https://github.com/SeanChenR"
   },
   {
     name: "x",
-    imgPath: "/images/x.png",
+    imgPath: "/images/x.svg",
     url: "https://x.com/Seanchen0111"
   },
   {
+    name: "medium",
+    imgPath: "/images/medium.svg",
+    url: "https://medium.com/@angus.chen9001"
+  },
+  {
     name: "ithome",
-    imgPath: "/images/ithome.png",
+    imgPath: "/images/ithome.svg",
     url: "https://ithelp.ithome.com.tw/m/users/20168336/ironman"
   }
 ]

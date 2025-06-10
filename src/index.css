@@ -174,7 +174,7 @@ section {
       @apply flex;
 
       .inner {
-        @apply px-5 py-2 rounded-lg ring-2 ring-[#0ff] group-hover:bg-transparent shadow-lg shadow-[#0ff] inset-shadow-sm inset-shadow-[#0ff] bg-[#0ff] group-hover:inset-shadow-[#fff] transition-colors duration-300;
+        @apply md:px-5 md:py-2 px-3 py-1 rounded-lg ring-2 ring-[#0ff] group-hover:bg-transparent shadow-lg shadow-[#0ff] inset-shadow-sm inset-shadow-[#0ff] bg-[#0ff] group-hover:inset-shadow-[#fff] transition-colors duration-300;
 
         span {
           @apply text-black group-hover:text-[#0ff] transition-colors duration-300;
@@ -330,7 +330,7 @@ section {
     @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
 
     .footer-container {
-      @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 w-full;
+      @apply grid grid-cols-1 gap-5 w-full;
     }
 
     p {
@@ -338,10 +338,14 @@ section {
     }
 
     .socials {
-      @apply flex items-center justify-center gap-5;
+      @apply flex items-center justify-center gap-4 md:gap-5 -mb-3;
 
       .icon {
-        @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-xl size-10 md:size-12 cursor-pointer transition-all duration-500 hover:bg-black-50;
+        @apply bg-transparent flex justify-center items-center rounded-xl size-8 md:size-12 cursor-pointer transition-all duration-500 hover:scale-125;
+      }
+
+      .ithome-special {
+        @apply bg-transparent flex justify-center items-center rounded-xl h-auto w-15 md:w-25 cursor-pointer transition-all duration-500 hover:scale-125;
       }
 
       img {
@@ -498,6 +502,62 @@ a:hover .star-7 {
   height: auto;
   filter: drop-shadow(0 0 10px #fffdef);
   z-index: 2;
+}
+
+/* 所有圖標的基本樣式 */
+#Github,
+#Linkedin,
+#Instagram,
+#IThome,
+#Medium,
+#X {
+  fill: #fff;
+  animation: rainbow-glow 3s linear infinite;
+}
+
+/* 為每個圖標設定不同的動畫延遲，創造輪流效果 */
+#Github {
+  animation-delay: 0s;
+}
+#Linkedin {
+  animation-delay: 0.5s;
+}
+#Instagram {
+  animation-delay: 1s;
+}
+#IThome {
+  animation-delay: 1.5s;
+}
+#Medium {
+  animation-delay: 2s;
+}
+#X {
+  animation-delay: 2.5s;
+}
+
+/* 彩虹發光動畫 */
+@keyframes rainbow-glow {
+  0% {
+    filter: drop-shadow(0 0 1rem #ff0000) hue-rotate(0deg);
+  }
+  16.66% {
+    filter: drop-shadow(0 0 1rem #ff8800) hue-rotate(60deg);
+  }
+  33.33% {
+    filter: drop-shadow(0 0 1rem #ffff00) hue-rotate(120deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 1rem #00ff00) hue-rotate(180deg);
+  }
+  66.66% {
+    filter: drop-shadow(0 0 1rem #0088ff) hue-rotate(240deg);
+  }
+  83.33% {
+    filter: drop-shadow(0 0 1rem #8800ff) hue-rotate(300deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 1rem #ff0000) hue-rotate(360deg);
+  }
 }
 
 /* Hero text slider starts */
