@@ -511,52 +511,15 @@ a:hover .star-7 {
 #IThome,
 #Medium,
 #X {
-  fill: #fff;
-  animation: rainbow-glow 3s linear infinite;
+  animation: rainbowFill 3s linear infinite;
 }
 
-/* 為每個圖標設定不同的動畫延遲，創造輪流效果 */
-#Github {
-  animation-delay: 0s;
-}
-#Linkedin {
-  animation-delay: 0.5s;
-}
-#Instagram {
-  animation-delay: 1s;
-}
-#IThome {
-  animation-delay: 1.5s;
-}
-#Medium {
-  animation-delay: 2s;
-}
-#X {
-  animation-delay: 2.5s;
-}
-
-/* 彩虹發光動畫 */
-@keyframes rainbow-glow {
+@keyframes rainbowFill {
   0% {
-    filter: drop-shadow(0 0 1rem #ff0000) hue-rotate(0deg);
-  }
-  16.66% {
-    filter: drop-shadow(0 0 1rem #ff8800) hue-rotate(60deg);
-  }
-  33.33% {
-    filter: drop-shadow(0 0 1rem #ffff00) hue-rotate(120deg);
-  }
-  50% {
-    filter: drop-shadow(0 0 1rem #00ff00) hue-rotate(180deg);
-  }
-  66.66% {
-    filter: drop-shadow(0 0 1rem #0088ff) hue-rotate(240deg);
-  }
-  83.33% {
-    filter: drop-shadow(0 0 1rem #8800ff) hue-rotate(300deg);
+    filter: hue-rotate(0deg);
   }
   100% {
-    filter: drop-shadow(0 0 1rem #ff0000) hue-rotate(360deg);
+    filter: hue-rotate(360deg);
   }
 }
 
