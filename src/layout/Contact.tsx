@@ -5,13 +5,15 @@ import emailjs from "@emailjs/browser"
 import TitleHeader from "../components/TitleHeader"
 import ContactExperience from "../components/Models/contact/ContactExperience"
 
+type ButtonState = 'ready' | 'loading' | 'success'
+
 const Contact = () => {
   const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID
   const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID
   const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
 
   const formRef = useRef<HTMLFormElement>(null)
-  const [loading, setLoading] = useState(false)
+  const [buttonState, setButtonState] = useState<ButtonState>('ready')
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -25,7 +27,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    setLoading(true)
+    setButtonState('loading')
 
     if (!formRef.current) return
 
@@ -37,12 +39,53 @@ const Contact = () => {
         publicKey
       )
 
-      // Reset form and stop loading
+      // Show success state and keep it
+      setButtonState('success')
       setForm({ name: "", email: "", message: "" })
     } catch (error) {
-      console.error("EmailJS Error:", error) // Optional: show toast
-    } finally {
-      setLoading(false) // Always stop loading, even on error
+      console.error("EmailJS Error:", error)
+      setButtonState('ready') // Reset on error
+    }
+  }
+
+  const renderButtonContent = () => {
+    switch (buttonState) {
+      case 'loading':
+        return (
+          <div className="flex-center w-full h-full">
+            <div className="inline-flex items-center gap-2 text-white">
+              <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></div>
+              <span>Sending...</span>
+            </div>
+          </div>
+        )
+      case 'success':
+        return (
+          <div className="flex-center w-full h-full">
+            <svg 
+              className="w-8 h-8 animate-bounce" 
+              xmlns="http://www.w3.org/2000/svg" 
+              x="0px" 
+              y="0px" 
+              width="100" 
+              height="100" 
+              viewBox="0 0 48 48"
+            >
+              <path fill="#4caf50" d="M44,24c0,11-9,20-20,20S4,35,4,24S13,4,24,4S44,13,44,24z"></path>
+              <path fill="#ffffff" d="M34.6,14.6L21,28.2l-5.6-5.6l-2.8,2.8l8.4,8.4l16.4-16.4L34.6,14.6z"></path>
+            </svg>
+          </div>
+        )
+      default: // ready
+        return (
+          <>
+            <div className="bg-circle" />
+            <p className="text">Send Mail</p>
+            <div className="arrow-wrapper">
+              <img src="/images/arrow-down.svg" alt="arrow" />
+            </div>
+          </>
+        )
     }
   }
 
@@ -71,6 +114,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What's your good name?"
                     required
+                    disabled={buttonState !== 'ready'}
                   />
                 </div>
 
@@ -84,6 +128,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What's your email address?"
                     required
+                    disabled={buttonState !== 'ready'}
                   />
                 </div>
 
@@ -97,18 +142,27 @@ const Contact = () => {
                     placeholder="How can I help you?"
                     rows={5}
                     required
+                    disabled={buttonState !== 'ready'}
                   />
                 </div>
 
-                <button type="submit">
-                  <div className="cta-button group">
-                    <div className="bg-circle" />
-                    <p className="text">
-                      {loading ? "Sending..." : "Send Mail"}
-                    </p>
-                    <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
-                    </div>
+                <button 
+                  type="submit"
+                  disabled={buttonState === 'loading' || buttonState === 'success'}
+                  className={`transition-all duration-300 ${
+                    buttonState === 'loading' || buttonState === 'success' 
+                      ? 'cursor-not-allowed' 
+                      : 'cursor-pointer'
+                  }`}
+                >
+                  <div className={`cta-button ${
+                    buttonState === 'ready' ? 'group' : ''
+                  } ${
+                    buttonState === 'success' 
+                      ? 'bg-green-500/20 border-green-400' 
+                      : ''
+                  }`}>
+                    {renderButtonContent()}
                   </div>
                 </button>
               </form>
